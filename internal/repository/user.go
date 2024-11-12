@@ -5,7 +5,7 @@ import (
 	"database/sql"
 	"errors"
 	"github.com/jmoiron/sqlx"
-	"go-boilerplate/internal/model"
+	"go-shorten/internal/model"
 
 	sq "github.com/Masterminds/squirrel"
 )

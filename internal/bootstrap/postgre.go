@@ -2,7 +2,7 @@ package bootstrap
 
 import (
 	"github.com/jmoiron/sqlx"
-	"go-boilerplate/internal/config"
+	"go-shorten/internal/config"
 
 	_ "github.com/jackc/pgx/v5/stdlib"
 )

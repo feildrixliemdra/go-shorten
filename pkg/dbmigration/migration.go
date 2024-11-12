@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"github.com/pressly/goose/v3"
 	log "github.com/sirupsen/logrus"
-	"go-boilerplate/internal/config"
+	"go-shorten/internal/config"
 	"os"
 )
 

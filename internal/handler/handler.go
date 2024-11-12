@@ -1,8 +1,8 @@
 package handler
 
 import (
-	"go-boilerplate/internal/appcontext"
-	"go-boilerplate/internal/service"
+	"go-shorten/internal/appcontext"
+	"go-shorten/internal/service"
 )
 
 type Handler struct {

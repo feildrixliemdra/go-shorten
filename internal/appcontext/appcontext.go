@@ -1,6 +1,6 @@
 package appcontext
 
-import "go-boilerplate/internal/config"
+import "go-shorten/internal/config"
 
 // AppContext the app context struct
 type AppContext struct {

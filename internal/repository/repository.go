@@ -2,7 +2,7 @@ package repository
 
 import (
 	"github.com/jmoiron/sqlx"
-	"go-boilerplate/internal/appcontext"
+	"go-shorten/internal/appcontext"
 )
 
 type Repository struct {

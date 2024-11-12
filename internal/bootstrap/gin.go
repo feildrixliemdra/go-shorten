@@ -2,9 +2,9 @@ package bootstrap
 
 import (
 	"github.com/gin-gonic/gin"
-	"go-boilerplate/internal/config"
-	"go-boilerplate/internal/handler"
-	"go-boilerplate/internal/router"
+	"go-shorten/internal/config"
+	"go-shorten/internal/handler"
+	"go-shorten/internal/router"
 )
 
 func InitiateGinRouter(cfg *config.Config, handler *handler.Handler) *gin.Engine {

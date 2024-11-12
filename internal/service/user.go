@@ -3,10 +3,10 @@ package service
 import (
 	"context"
 	"fmt"
-	"go-boilerplate/internal/constant"
-	"go-boilerplate/internal/dto"
-	"go-boilerplate/internal/model"
-	"go-boilerplate/internal/payload"
+	"go-shorten/internal/constant"
+	"go-shorten/internal/dto"
+	"go-shorten/internal/model"
+	"go-shorten/internal/payload"
 )
 
 type IUserService interface {

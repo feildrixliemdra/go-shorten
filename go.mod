@@ -1,4 +1,4 @@
-module go-boilerplate
+module go-shorten
 
 go 1.22.0
 

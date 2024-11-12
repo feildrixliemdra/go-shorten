@@ -4,7 +4,7 @@ import (
 	log "github.com/sirupsen/logrus"
 
 	"github.com/spf13/viper"
-	"go-boilerplate/internal/config"
+	"go-shorten/internal/config"
 )
 
 // NewConfig initialize config object

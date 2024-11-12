@@ -1,7 +1,7 @@
 package appcontext
 
 import (
-	"go-boilerplate/internal/config"
+	"go-shorten/internal/config"
 )
 
 type Option struct {

@@ -3,8 +3,8 @@ package cmd
 import (
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
-	"go-boilerplate/cmd/http"
-	"go-boilerplate/cmd/migration"
+	"go-shorten/cmd/http"
+	"go-shorten/cmd/migration"
 )
 
 func Start() {

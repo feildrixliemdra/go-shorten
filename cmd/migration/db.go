@@ -1,8 +1,8 @@
 package migration
 
 import (
-	"go-boilerplate/internal/bootstrap"
-	"go-boilerplate/pkg/dbmigration"
+	"go-shorten/internal/bootstrap"
+	"go-shorten/pkg/dbmigration"
 )
 
 func MigrateDatabase() {

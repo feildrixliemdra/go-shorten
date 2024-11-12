@@ -5,12 +5,12 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/jmoiron/sqlx"
 	log "github.com/sirupsen/logrus"
-	"go-boilerplate/internal/appcontext"
-	"go-boilerplate/internal/bootstrap"
-	"go-boilerplate/internal/handler"
-	"go-boilerplate/internal/repository"
-	"go-boilerplate/internal/server"
-	"go-boilerplate/internal/service"
+	"go-shorten/internal/appcontext"
+	"go-shorten/internal/bootstrap"
+	"go-shorten/internal/handler"
+	"go-shorten/internal/repository"
+	"go-shorten/internal/server"
+	"go-shorten/internal/service"
 	"go.mongodb.org/mongo-driver/mongo"
 )
 

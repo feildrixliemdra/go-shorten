@@ -5,13 +5,13 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    working_dir: /go/src/github.com/feildrixliemdra/go-boilerplate
-    container_name: my-app
-    hostname: my-app
+    working_dir: /go/src/github.com/feildrixliemdra/go-shorten
+    container_name: go-shorten
+    hostname: go-shorten
     networks:
       - code-network
     volumes:
-      - .:/go/src/github.com/feildrixliemdra/go-boilerplate
+      - .:/go/src/github.com/feildrixliemdra/go-shorten
     ports:
       - '8081:8081'
     depends_on:
@@ -24,7 +24,7 @@ services:
     hostname: postgre
     environment:
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: go-boilerplate
+      POSTGRES_DB: go-shorten
       PGDATA: /data/postgre
       POSTGRES_USER: admin
       TZ: "Asia/Jakarta"

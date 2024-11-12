@@ -4,9 +4,9 @@ import (
 	"errors"
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"
-	"go-boilerplate/internal/constant"
-	"go-boilerplate/internal/payload"
-	val "go-boilerplate/internal/validator"
+	"go-shorten/internal/constant"
+	"go-shorten/internal/payload"
+	val "go-shorten/internal/validator"
 	"net/http"
 )
 

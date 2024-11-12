@@ -5,9 +5,9 @@ import (
 	"github.com/gin-gonic/gin"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cast"
-	"go-boilerplate/internal/constant"
-	"go-boilerplate/internal/payload"
-	"go-boilerplate/internal/util"
+	"go-shorten/internal/constant"
+	"go-shorten/internal/payload"
+	"go-shorten/internal/util"
 )
 
 type IUserHandler interface {

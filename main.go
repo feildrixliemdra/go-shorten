@@ -1,7 +1,7 @@
 package main
 
 import (
-	"go-boilerplate/cmd"
+	"go-shorten/cmd"
 )
 
 func main() {

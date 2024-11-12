@@ -6,7 +6,7 @@ import (
 	"github.com/go-playground/locales/en"
 	ut "github.com/go-playground/universal-translator"
 	en_translations "github.com/go-playground/validator/v10/translations/en"
-	"go-boilerplate/internal/payload"
+	"go-shorten/internal/payload"
 
 	"github.com/go-playground/validator/v10"
 	"reflect"

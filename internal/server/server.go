@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 	log "github.com/sirupsen/logrus"
-	"go-boilerplate/internal/config"
+	"go-shorten/internal/config"
 	"net/http"
 	"os"
 	"os/signal"

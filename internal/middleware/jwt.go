@@ -2,7 +2,7 @@ package middleware
 
 import (
 	"github.com/gin-gonic/gin"
-	"go-boilerplate/internal/util"
+	"go-shorten/internal/util"
 	"net/http"
 )
 

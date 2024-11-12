@@ -2,9 +2,9 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	"go-boilerplate/internal/config"
-	"go-boilerplate/internal/handler"
-	"go-boilerplate/internal/middleware"
+	"go-shorten/internal/config"
+	"go-shorten/internal/handler"
+	"go-shorten/internal/middleware"
 	"net/http"
 )
 

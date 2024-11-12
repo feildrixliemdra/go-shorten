@@ -1,8 +1,8 @@
 package service
 
 import (
-	"go-boilerplate/internal/appcontext"
-	"go-boilerplate/internal/repository"
+	"go-shorten/internal/appcontext"
+	"go-shorten/internal/repository"
 )
 
 type Service struct {
