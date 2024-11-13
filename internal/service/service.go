@@ -1,21 +1,17 @@
 package service
 
 import (
-	"go-shorten/internal/appcontext"
+	"go-shorten/internal/config"
 	"go-shorten/internal/repository"
+	"go-shorten/internal/service/shorten"
 )
 
 type Service struct {
-	UserService IUserService
+	ShortenService shorten.IShortenService
 }
 
-type Option struct {
-	appcontext.Option
-	Repository *repository.Repository
-}
-
-func InitiateService(option Option) *Service {
+func InitiateService(cfg *config.Config, repository *repository.Repository) *Service {
 	return &Service{
-		UserService: NewUserService(option),
+		ShortenService: shorten.NewShortenService(repository.ShortenRepository),
 	}
 }

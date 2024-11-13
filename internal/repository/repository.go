@@ -2,20 +2,19 @@ package repository
 
 import (
 	"github.com/jmoiron/sqlx"
-	"go-shorten/internal/appcontext"
+	"go-shorten/internal/repository/shorten"
 )
 
 type Repository struct {
-	UserRepository IUserRepository
+	ShortenRepository shorten.IShortenRepository
 }
 
 type Option struct {
-	appcontext.Option
 	DB *sqlx.DB
 }
 
 func InitiateRepository(opt Option) *Repository {
 	return &Repository{
-		UserRepository: NewUserRepository(opt),
+		ShortenRepository: shorten.NewShortenRepository(opt.DB),
 	}
 }
