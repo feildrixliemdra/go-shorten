@@ -39,13 +39,13 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 #create project directory
 RUN mkdir -p $PROJECT_DIR/config
-RUN #mkdir -p $PROJECT_DIR/database/migration
+RUN mkdir -p $PROJECT_DIR/database/migration
 
 WORKDIR $PROJECT_DIR
 
 COPY --from=builder $BUILDDIR/go-shorten go-shorten
 COPY --from=builder $BUILDDIR/config/config.yaml $PROJECT_DIR/config/config.yaml
-#COPY --from=builder $BUILDDIR/database/migration $PROJECT_DIR/database/migration
+COPY --from=builder $BUILDDIR/database/migration $PROJECT_DIR/database/migration
 #COPY --from=builder $BUILDDIR/config/msg.yaml $PROJECT_DIR/config/msg.yaml
 
 CMD ["sh","-c", "/opt/go-shorten/go-shorten serve-http"]

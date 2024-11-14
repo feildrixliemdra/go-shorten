@@ -32,11 +32,10 @@ func (r *router) Init() {
 	})
 
 	v1 := r.rtr.Group("/v1")
-	shortenGroup := v1.Group("/shorten")
+	shortenGroup := v1.Group("/shortens")
 
 	shortenGroup.POST("", r.handler.ShortenHandler.CreateShorten)
-	shortenGroup.GET("/:code", r.handler.ShortenHandler.GetShorten)
-	shortenGroup.GET("/:code/stats", r.handler.ShortenHandler.GetShortenStats)
-	shortenGroup.DELETE("/:code", r.handler.ShortenHandler.Delete)
-
+	//shortenGroup.GET("/:code", r.handler.ShortenHandler.GetShorten)
+	//shortenGroup.GET("/:code/stats", r.handler.ShortenHandler.GetShortenStats)
+	//shortenGroup.DELETE("/:code", r.handler.ShortenHandler.Delete)
 }

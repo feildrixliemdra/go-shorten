@@ -58,7 +58,7 @@ func (h *httpServer) Run() error {
 	<-quit
 	log.Println("shutting down server...")
 
-	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second) //3 second timeout to make sure all process finished
+	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second) //2 second timeout to make sure all process finished
 	defer cancel()
 	if err := srv.Shutdown(ctx); err != nil {
 		log.Fatal("server shutdown:", err)

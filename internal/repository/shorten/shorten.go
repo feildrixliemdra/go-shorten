@@ -24,8 +24,12 @@ func NewShortenRepository(db *sqlx.DB) IShortenRepository {
 }
 
 func (r repository) Create(ctx context.Context, shortenModel model.Shorten) (err error) {
-	//TODO implement me
-	panic("implement me")
+	query := `INSERT INTO 
+    			shortens (original_url, short_url)
+    			VALUES ($1, $2)`
+	_, err = r.DB.ExecContext(ctx, query, shortenModel.OriginalURL, shortenModel.ShortURL)
+
+	return err
 }
 
 func (r repository) GetByCode(ctx context.Context, code string) (res model.Shorten, err error) {
