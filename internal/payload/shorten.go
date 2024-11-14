@@ -13,7 +13,9 @@ type (
 
 type (
 	GetShortenRequest  struct{}
-	GetShortenResponse struct{}
+	GetShortenResponse struct {
+		OriginalURL string `json:"original_url"`
+	}
 )
 
 type (

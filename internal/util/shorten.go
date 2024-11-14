@@ -6,6 +6,7 @@ import (
 	"math/rand"
 	"strings"
 	"time"
+	"unicode"
 )
 
 const letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -37,4 +38,15 @@ func ShortenURL(url string) string {
 	}
 
 	return shortURL
+}
+
+// RemoveNonAlphabets removes any character that is not an alphabet (A-Z, a-z).
+func RemoveNonAlphabets(input string) string {
+	result := ""
+	for _, char := range input {
+		if unicode.IsLetter(char) {
+			result += string(char)
+		}
+	}
+	return result
 }

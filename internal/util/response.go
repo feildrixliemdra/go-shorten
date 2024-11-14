@@ -58,3 +58,13 @@ func ErrBadRequestResponse(c *gin.Context, err string) {
 
 	return
 }
+
+func ErrResourceNotFoundResponse(c *gin.Context, err string) {
+	c.AbortWithStatusJSON(http.StatusNotFound, payload.Response{
+		Success: false,
+		Message: constant.ResourceNotFoundMessageResponse,
+		Error:   err,
+	})
+
+	return
+}

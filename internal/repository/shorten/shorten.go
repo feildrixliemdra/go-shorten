@@ -33,8 +33,19 @@ func (r repository) Create(ctx context.Context, shortenModel model.Shorten) (err
 }
 
 func (r repository) GetByCode(ctx context.Context, code string) (res model.Shorten, err error) {
-	//TODO implement me
-	panic("implement me")
+	query := `SELECT  original_url from shortens where short_url = $1 AND deleted_at IS NULL`
+
+	err = r.DB.GetContext(ctx, &res, query, code)
+	if err != nil {
+		return res, err
+	}
+
+	//update click_count if short_url found
+	updateQuery := `UPDATE shortens SET click_count = click_count + 1 where short_url = $1`
+
+	_, err = r.DB.ExecContext(ctx, updateQuery, code)
+
+	return res, err
 }
 
 func (r repository) GetStats(ctx context.Context, code string) (res model.Shorten, err error) {

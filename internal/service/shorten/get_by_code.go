@@ -2,11 +2,24 @@ package shorten
 
 import (
 	"context"
+	"database/sql"
+	"errors"
+	"go-shorten/internal/constant/errormsg"
+
 	"go-shorten/internal/payload"
 )
 
 func (s service) GetByCode(ctx context.Context, code string) (res payload.GetShortenResponse, err error) {
-	//TODO: implement this
 
-	return
+	shorten, err := s.ShortenRepository.GetByCode(ctx, code)
+	if err != nil {
+		if errors.Is(err, sql.ErrNoRows) {
+			return res, errormsg.ErrShortenNotFound
+		}
+		return res, err
+	}
+
+	res.OriginalURL = shorten.OriginalURL
+
+	return res, err
 }
