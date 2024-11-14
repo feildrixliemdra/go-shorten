@@ -9,7 +9,7 @@ import (
 type IShortenService interface {
 	Create(ctx context.Context, req payload.CreateShortenRequest) (res payload.CreateShortenResponse, err error)
 	GetByCode(ctx context.Context, code string) (res payload.GetShortenResponse, err error)
-	GetStats(ctx context.Context, code string) (res payload.GetStatsRequest, err error)
+	GetStats(ctx context.Context, code string) (res payload.GetStatsResponse, err error)
 	Delete(ctx context.Context, code string) (err error)
 }
 

@@ -49,8 +49,14 @@ func (r repository) GetByCode(ctx context.Context, code string) (res model.Short
 }
 
 func (r repository) GetStats(ctx context.Context, code string) (res model.Shorten, err error) {
-	//TODO implement me
-	panic("implement me")
+	query := `SELECT  original_url, click_count from shortens where short_url = $1 AND deleted_at IS NULL`
+
+	err = r.DB.GetContext(ctx, &res, query, code)
+	if err != nil {
+		return res, err
+	}
+
+	return res, err
 }
 
 func (r repository) Delete(ctx context.Context, code string) (err error) {

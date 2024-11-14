@@ -36,6 +36,6 @@ func (r *router) Init() {
 
 	shortenGroup.POST("", r.handler.ShortenHandler.CreateShorten)
 	shortenGroup.GET("/:code", r.handler.ShortenHandler.GetShorten)
-	//shortenGroup.GET("/:code/stats", r.handler.ShortenHandler.GetShortenStats)
+	shortenGroup.GET("/:code/stats", r.handler.ShortenHandler.GetShortenStats)
 	//shortenGroup.DELETE("/:code", r.handler.ShortenHandler.Delete)
 }

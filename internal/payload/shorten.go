@@ -20,5 +20,8 @@ type (
 
 type (
 	GetStatsRequest  struct{}
-	GetStatsResponse struct{}
+	GetStatsResponse struct {
+		OriginalURL string `json:"original_url"`
+		ClickCount  uint64 `json:"click_count"`
+	}
 )
