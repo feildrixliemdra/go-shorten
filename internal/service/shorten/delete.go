@@ -1,9 +1,9 @@
 package shorten
 
-import "context"
+import (
+	"context"
+)
 
 func (s service) Delete(ctx context.Context, code string) (err error) {
-	//TODO: implement this
-
-	return
+	return s.ShortenRepository.Delete(ctx, code)
 }

@@ -60,6 +60,12 @@ func (r repository) GetStats(ctx context.Context, code string) (res model.Shorte
 }
 
 func (r repository) Delete(ctx context.Context, code string) (err error) {
-	//TODO implement me
-	panic("implement me")
+	query := `UPDATE shortens SET deleted_at = NOW()  where short_url = $1 AND deleted_at IS NULL`
+
+	_, err = r.DB.ExecContext(ctx, query, code)
+	if err != nil {
+		return err
+	}
+
+	return err
 }
